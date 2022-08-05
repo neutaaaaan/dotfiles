@@ -1,0 +1,3 @@
+hardstatus alwayslastline '%{= ck}[%S] %?%-Lw%?%n*%f %t%?%{= rk}(%u)%?%{= ck}%+Lw%?%=  "%H" %c:%s %Y-%m-%d'
+
+defscrollback 16384
