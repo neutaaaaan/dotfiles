@@ -1,0 +1,62 @@
+# Should be legible in just about any conditions.
+# Displays the username and the hostname, in case the user is multitasking.
+
+# Status update interval
+set -g status-interval 1
+
+# Visual bell and stuff
+set -g monitor-activity off
+set -g visual-activity off
+set -g visual-bell off
+
+# Basic status bar colors
+set -g status-style bg=default,fg=brightblack
+
+# Left side of status bar
+set -g status-left-style bg=default,fg=red
+set -g status-left-length 30
+set -g status-left "[#S] "
+
+# Right side of status bar
+set -g status-right-style bg=default,fg=red
+set -g status-right-length 64
+set -g status-right "#[fg=blue]#(whoami)#[fg=brightblack]@#[fg=blue]#H #[fg=red]%H:%M:%S %Z %a %d-%b-%y"
+
+# Window status
+set -g window-status-format "#I:#W#F"
+set -g window-status-current-format "#I:#W#F"
+
+# Current window status
+set -g window-status-current-style bg=default,fg=red
+
+# Window with activity status
+set -g window-status-activity-style bg=red,fg=black
+
+# Window separator
+set -g window-status-separator " "
+
+# Window status alignment
+set -g status-justify left
+
+# Pane border
+set -g pane-border-style bg=default,fg=brightblack
+
+# Active pane border
+set -g pane-active-border-style bg=default,fg=red
+
+# Pane number indicator
+set -g display-panes-colour brightblack
+set -g display-panes-active-colour red
+
+# Clock mode
+set -g clock-mode-colour red
+set -g clock-mode-style 24
+
+# Message
+set -g message-style bg=default,fg=red
+
+# Command message
+set -g message-command-style bg=red,fg=black
+
+# Mode
+set -g mode-style bg=red,fg=black
