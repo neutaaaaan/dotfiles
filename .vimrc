@@ -42,7 +42,7 @@ map <leader>deltrail :%s/\s\+$//e<CR>
 call plug#begin('/usr/local/etc/vim/plugged')
 
 " colorschemes
-Plug 'lifepillar/vim-solarized8', { 'dir': '/usr/local/etc/vim/plugged/solarized8' }
+Plug 'lifepillar/vim-gruvbox8', { 'dir': '/usr/local/etc/vim/plugged/gruvbox8' }
 Plug 'romainl/Apprentice'
 Plug 'neutaaaaan/iosvkem'
 Plug 'neutaaaaan/monosvkem'
