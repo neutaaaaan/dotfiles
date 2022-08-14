@@ -106,7 +106,8 @@ augroup END
 
 augroup highlight_override
 	autocmd!
-	autocmd ColorScheme * hi String ctermfg=4
+	autocmd ColorScheme quiet hi String ctermfg=4
+	autocmd ColorScheme quiet hi Special ctermfg=1
 augroup END
 
 set t_Co=256
