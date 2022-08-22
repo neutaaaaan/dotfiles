@@ -21,6 +21,7 @@ set undodir=~/.vim/files/undo
 set viminfo+=n~/.vim/viminfo
 
 set hlsearch
+set incsearch
 map <leader>/ :nohlsearch<CR>
 map <leader>p :set paste!<CR>
 map <leader>showtrail /\s\+$<CR>
