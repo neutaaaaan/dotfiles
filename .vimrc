@@ -45,7 +45,6 @@ call plug#begin('/usr/local/etc/vim/plugged')
 Plug 'lifepillar/vim-gruvbox8', { 'dir': '/usr/local/etc/vim/plugged/gruvbox8' }
 Plug 'romainl/Apprentice'
 Plug 'neutaaaaan/iosvkem'
-Plug 'neutaaaaan/monosvkem'
 Plug 'romainl/vim-malotru', { 'dir': '/usr/local/etc/vim/plugged/malotru' }
 Plug 'gerw/vim-HiLinkTrace', { 'dir': '/usr/local/etc/vim/plugged/HiLinkTrace' }
 Plug 'lifepillar/vim-colortemplate', { 'dir': '/usr/local/etc/vim/plugged/colortemplate' }
@@ -62,7 +61,6 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jpalardy/vim-slime', { 'dir': '/usr/local/etc/vim/plugged/slime' }
 
 " qol
-Plug 'tpope/vim-surround', { 'dir': '/usr/local/etc/vim/plugged/surround' }
 Plug 'tpope/vim-commentary', { 'dir': '/usr/local/etc/vim/plugged/commentary' }
 Plug 'tpope/vim-repeat', { 'dir': '/usr/local/etc/vim/plugged/repeat' }
 Plug 'markonm/traces.vim'
@@ -111,5 +109,5 @@ augroup highlight_override
 augroup END
 
 set t_Co=256
-set background=light
+set background=dark
 colorscheme quiet
