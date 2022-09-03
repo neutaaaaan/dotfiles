@@ -22,6 +22,7 @@ set viminfo+=n~/.vim/viminfo
 
 set hlsearch
 set incsearch
+inoremap <C-U> <C-G>u<C-U>
 map <leader>/ :nohlsearch<CR>
 map <leader>p :set paste!<CR>
 map <leader>showtrail /\s\+$<CR>
