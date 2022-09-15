@@ -32,7 +32,7 @@ set t_Co=256
 set background=dark
 augroup highlight_override
 	autocmd!
-	autocmd ColorScheme * hi Special ctermfg=1
-	autocmd ColorScheme * hi String ctermfg=4
+	autocmd ColorScheme quiet hi Special ctermfg=1
+	autocmd ColorScheme quiet hi String ctermfg=4
 augroup END
 colorscheme quiet" > "$HOME"/.vimrc
