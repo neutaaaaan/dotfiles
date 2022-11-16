@@ -37,6 +37,7 @@ map <leader>p :set paste!<CR>
 map <leader>/ :nohlsearch<CR>
 map <leader>showtrail /\s\+$<CR>
 map <leader>deltrail :%s/\s\+$//e<CR>
+map <leader>u :UndotreeToggle<CR>
 
 " vim plug
 call plug#begin('/usr/local/etc/vim/plugged')
@@ -46,6 +47,7 @@ Plug 'lifepillar/vim-gruvbox8', { 'dir': '/usr/local/etc/vim/plugged/gruvbox8' }
 Plug 'romainl/Apprentice'
 Plug 'neutaaaaan/iosvkem'
 Plug 'romainl/vim-malotru', { 'dir': '/usr/local/etc/vim/plugged/malotru' }
+Plug 'habamax/vim-pire', { 'dir': '/usr/local/etc/vim/plugged/pire' }
 Plug 'gerw/vim-HiLinkTrace', { 'dir': '/usr/local/etc/vim/plugged/HiLinkTrace' }
 Plug 'lifepillar/vim-colortemplate', { 'dir': '/usr/local/etc/vim/plugged/colortemplate' }
 
@@ -72,6 +74,9 @@ call plug#end()
 " vim-slime
 let g:slime_target = "tmux"
 let g:slime_paste_file = "~/.vim/files/.slime_paste"
+
+" undotree
+let g:undotree_SplitWidth = 40
 
 set laststatus=1                                      " always show statusline
 set statusline=                                       " clear statusline
@@ -106,6 +111,7 @@ augroup highlight_override
 	autocmd!
 	autocmd ColorScheme quiet hi String ctermfg=4
 	autocmd ColorScheme quiet hi Special ctermfg=1
+	autocmd ColorScheme quiet hi helpHyperTextJump ctermfg=8 cterm=underline
 augroup END
 
 set t_Co=256
