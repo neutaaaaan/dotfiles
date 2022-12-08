@@ -111,7 +111,7 @@ augroup highlight_override
 	autocmd!
 	autocmd ColorScheme quiet hi String ctermfg=4
 	autocmd ColorScheme quiet hi Special ctermfg=1
-	autocmd ColorScheme quiet hi helpHyperTextJump ctermfg=8 cterm=underline
+	autocmd ColorScheme quiet hi helpHyperTextJump ctermfg=5 cterm=underline
 augroup END
 
 set t_Co=256
