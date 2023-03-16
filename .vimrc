@@ -38,18 +38,18 @@ map <leader>/ :nohlsearch<CR>
 map <leader>showtrail /\s\+$<CR>
 map <leader>deltrail :%s/\s\+$//e<CR>
 map <leader>u :UndotreeToggle<CR>
+" map <silent><Leader>g :call setbufvar(winbufnr(popup_atcursor(systemlist("cd " . shellescape(fnamemodify(resolve(expand('%:p')), ":h")) . " && git log --no-merges -n 1 -L " . shellescape(line("v") . "," . line(".") . ":" . resolve(expand("%:p")))), { "padding": [1,1,1,1], "pos": "botleft", "wrap": 0 })), "&filetype", "git")<CR>
 
 " vim plug
 call plug#begin('/usr/local/etc/vim/plugged')
 
 " colorschemes
-Plug 'lifepillar/vim-gruvbox8', { 'dir': '/usr/local/etc/vim/plugged/gruvbox8' }
-Plug 'romainl/Apprentice'
+Plug 'romainl/vim-dichromatic', { 'dir': '/usr/local/etc/vim/plugged/dichromatic' }
 Plug 'neutaaaaan/iosvkem'
 Plug 'romainl/vim-malotru', { 'dir': '/usr/local/etc/vim/plugged/malotru' }
-Plug 'habamax/vim-pire', { 'dir': '/usr/local/etc/vim/plugged/pire' }
 Plug 'gerw/vim-HiLinkTrace', { 'dir': '/usr/local/etc/vim/plugged/HiLinkTrace' }
 Plug 'lifepillar/vim-colortemplate', { 'dir': '/usr/local/etc/vim/plugged/colortemplate' }
+Plug 'vim/colorschemes'
 
 " language support
 Plug 'editorconfig/editorconfig-vim'
@@ -76,11 +76,12 @@ let g:slime_target = "tmux"
 let g:slime_paste_file = "~/.vim/files/.slime_paste"
 
 " undotree
-let g:undotree_SplitWidth = 40
+let g:undotree_SplitWidth = 31
+let g:undotree_WindowLayout = 2
 
 set laststatus=1                                      " always show statusline
 set statusline=                                       " clear statusline
-set statusline+=%{&buftype!='terminal'?expand('%:p:h:t').'\\'.expand('%:t'):expand('%')}  " dir\filename.ext
+set statusline+=%{&buftype!='terminal'?expand('%:p:h:t').'\/'.expand('%:t'):expand('%')}  " dir\filename.ext
 set statusline+=\ 
 set statusline+=%m                                    " modified flag
 set statusline+=%r                                    " read only flag
@@ -109,11 +110,16 @@ augroup END
 
 augroup highlight_override
 	autocmd!
-	autocmd ColorScheme quiet hi String ctermfg=4
-	autocmd ColorScheme quiet hi Special ctermfg=1
+	" autocmd ColorScheme quiet hi String ctermfg=4
+	" autocmd ColorScheme quiet hi Special ctermfg=1
+	autocmd ColorScheme quiet hi DiffAdded ctermfg=2
+	autocmd ColorScheme quiet hi DiffRemoved ctermfg=1
 	autocmd ColorScheme quiet hi helpHyperTextJump ctermfg=5 cterm=underline
+
+	autocmd Colorscheme sorbet hi Normal ctermbg=none
+	autocmd Colorscheme sorbet hi Folded ctermbg=none
+	autocmd Colorscheme sorbet hi WildMenu ctermbg=none
 augroup END
 
-set t_Co=256
 set background=dark
-colorscheme quiet
+colorscheme sorbet
