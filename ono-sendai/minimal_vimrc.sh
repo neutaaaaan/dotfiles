@@ -29,9 +29,15 @@ map <leader>deltrail :%s/\s\+$//e<CR>
 
 set t_Co=256
 set background=dark
+
+augroup automagic_comments
+	autocmd!
+	autocmd FileType * setlocal formatoptions-=o
+augroup END
 augroup highlight_override
 	autocmd!
 	autocmd ColorScheme quiet hi Special ctermfg=1
 	autocmd ColorScheme quiet hi String ctermfg=4
 augroup END
+
 colorscheme quiet" > "$HOME"/.vimrc
