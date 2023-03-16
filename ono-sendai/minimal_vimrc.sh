@@ -36,8 +36,15 @@ augroup automagic_comments
 augroup END
 augroup highlight_override
 	autocmd!
-	autocmd ColorScheme quiet hi Special ctermfg=1
-	autocmd ColorScheme quiet hi String ctermfg=4
+	\" autocmd ColorScheme quiet hi Special ctermfg=1
+	\" autocmd ColorScheme quiet hi String ctermfg=4
+	autocmd ColorScheme quiet hi DiffAdded ctermfg=2
+	autocmd ColorScheme quiet hi DiffRemoved ctermfg=1
+	autocmd ColorScheme quiet hi helpHyperTextJump ctermfg=5 cterm=underline
+
+	autocmd Colorscheme sorbet hi Normal ctermbg=none
+	autocmd Colorscheme sorbet hi Folded ctermbg=none
+	autocmd Colorscheme sorbet hi WildMenu ctermbg=none
 augroup END
 
 colorscheme quiet" > "$HOME"/.vimrc
