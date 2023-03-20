@@ -116,9 +116,9 @@ augroup highlight_override
 	autocmd ColorScheme quiet hi DiffRemoved ctermfg=1
 	autocmd ColorScheme quiet hi helpHyperTextJump ctermfg=5 cterm=underline
 
-	autocmd Colorscheme sorbet hi Normal ctermbg=none
-	autocmd Colorscheme sorbet hi Folded ctermbg=none
-	autocmd Colorscheme sorbet hi WildMenu ctermbg=none
+	autocmd Colorscheme sorbet hi Normal ctermbg=16
+	autocmd Colorscheme sorbet hi Folded ctermbg=16
+	autocmd Colorscheme sorbet hi WildMenu ctermbg=16
 augroup END
 
 set background=dark
