@@ -119,7 +119,19 @@ augroup highlight_override
 	autocmd Colorscheme sorbet hi Normal ctermbg=16
 	autocmd Colorscheme sorbet hi Folded ctermbg=16
 	autocmd Colorscheme sorbet hi WildMenu ctermbg=16
+
+	autocmd Colorscheme wildcharm hi Normal ctermfg=253
+	autocmd Colorscheme wildcharm hi DiffChange ctermfg=253
+	autocmd Colorscheme wildcharm hi StatusLine ctermfg=253
+	autocmd Colorscheme wildcharm hi Pmenu ctermfg=253
+	autocmd Colorscheme wildcharm hi VertSplit ctermbg=16
+	autocmd Colorscheme wildcharm hi TabLine ctermbg=253
+	autocmd Colorscheme wildcharm hi PmenuThumb ctermbg=253
+	autocmd Colorscheme wildcharm hi CurSearch ctermfg=16 ctermbg=213
+
+	autocmd Colorscheme retrobox hi Normal ctermbg=16
+	autocmd Colorscheme dichromatic hi Normal ctermbg=16
 augroup END
 
 set background=dark
-colorscheme sorbet
+colorscheme wildcharm
