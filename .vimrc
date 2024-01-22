@@ -44,9 +44,7 @@ map <leader>u :UndotreeToggle<CR>
 call plug#begin('/usr/local/etc/vim/plugged')
 
 " colorschemes
-Plug 'romainl/vim-dichromatic', { 'dir': '/usr/local/etc/vim/plugged/dichromatic' }
 Plug 'neutaaaaan/iosvkem'
-Plug 'romainl/vim-malotru', { 'dir': '/usr/local/etc/vim/plugged/malotru' }
 Plug 'gerw/vim-HiLinkTrace', { 'dir': '/usr/local/etc/vim/plugged/HiLinkTrace' }
 Plug 'lifepillar/vim-colortemplate', { 'dir': '/usr/local/etc/vim/plugged/colortemplate' }
 Plug 'vim/colorschemes'
@@ -112,8 +110,8 @@ augroup highlight_override
 	autocmd!
 	" autocmd ColorScheme quiet hi String ctermfg=4
 	" autocmd ColorScheme quiet hi Special ctermfg=1
-	autocmd ColorScheme quiet hi DiffAdded ctermfg=2
-	autocmd ColorScheme quiet hi DiffRemoved ctermfg=1
+	" autocmd ColorScheme quiet hi Added ctermfg=2
+	" autocmd ColorScheme quiet hi Removed ctermfg=1
 	autocmd ColorScheme quiet hi helpHyperTextJump ctermfg=5 cterm=underline
 
 	autocmd Colorscheme sorbet hi Normal ctermbg=16
@@ -130,7 +128,6 @@ augroup highlight_override
 	autocmd Colorscheme wildcharm hi CurSearch ctermfg=16 ctermbg=213
 
 	autocmd Colorscheme retrobox hi Normal ctermbg=16
-	autocmd Colorscheme dichromatic hi Normal ctermbg=16
 augroup END
 
 set background=dark
