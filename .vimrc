@@ -1,6 +1,7 @@
 filetype plugin indent on
 syntax on
 runtime macros/matchit.vim
+packadd comment
 
 set autoindent
 set backspace=indent,eol,start
@@ -58,10 +59,9 @@ Plug 'Vimjas/vim-python-pep8-indent'
 " Plug 'SirVer/ultisnips'
 
 " REPL integration
-Plug 'jpalardy/vim-slime', { 'dir': '/usr/local/etc/vim/plugged/slime' }
+" Plug 'jpalardy/vim-slime', { 'dir': '/usr/local/etc/vim/plugged/slime' }
 
 " qol
-Plug 'tpope/vim-commentary', { 'dir': '/usr/local/etc/vim/plugged/commentary' }
 Plug 'tpope/vim-repeat', { 'dir': '/usr/local/etc/vim/plugged/repeat' }
 Plug 'markonm/traces.vim'
 Plug 'mbbill/undotree'
@@ -70,8 +70,8 @@ Plug 'tommcdo/vim-lion', { 'dir': '/usr/local/etc/vim/plugged/lion' }
 call plug#end()
 
 " vim-slime
-let g:slime_target = "tmux"
-let g:slime_paste_file = "~/.vim/files/.slime_paste"
+" let g:slime_target = "tmux"
+" let g:slime_paste_file = "~/.vim/files/.slime_paste"
 
 " undotree
 let g:undotree_SplitWidth = 31
